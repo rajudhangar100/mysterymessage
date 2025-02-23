@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import connectDb from "@/lib/connectDb";
 import UserModel from "@/models/User";
 import { usernameValidation } from "@/schema/signupSchema";

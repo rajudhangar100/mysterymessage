@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import UserModel from "@/models/User";
 import connectDb from "@/lib/connectDb";
 import { Message } from "@/models/User";//it is for type safety

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 //nextjs mai api likhne ke waqt routes ko handle karne ki jarurat nahi hai bcs
 //already handled hai, like isme api/sign-up route.ts naam ka api URL hai
 import connectDb from "@/lib/connectDb";

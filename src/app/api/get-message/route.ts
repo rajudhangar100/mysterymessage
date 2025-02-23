@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import connectDb from "@/lib/connectDb";
 import UserModel, { Message } from "@/models/User";
 import { getServerSession } from "next-auth";

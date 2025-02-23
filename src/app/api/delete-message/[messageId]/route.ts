@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import connectDb from "@/lib/connectDb";
 import { getServerSession } from "next-auth";
 import { Authoptions } from "../../auth/[...nextauth]/options";
