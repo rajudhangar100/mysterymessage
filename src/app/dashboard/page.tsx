@@ -22,7 +22,7 @@ import { useForm } from "react-hook-form";
 //such as switch button which is a very basic element of form
 
 
-const page = () => {
+const Page = () => {
   const [messages,setmessages]=useState<Message[]>([]);
   const [isloading,setisloading]=useState(false);
   const [isswitchloading,setisswitchloading]=useState(false);
@@ -186,4 +186,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

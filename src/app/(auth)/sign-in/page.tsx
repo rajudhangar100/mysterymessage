@@ -15,7 +15,7 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
 
-const page = () => {
+const Page = () => {
   const [ issubmiting,setissubmiting ] =useState(false);
   const router=useRouter();//used to redirect to another page
   const {toast}=useToast();//used to send notification
@@ -130,4 +130,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

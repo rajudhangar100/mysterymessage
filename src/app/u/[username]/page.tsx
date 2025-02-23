@@ -20,7 +20,8 @@ import axios, { Axios, AxiosError } from "axios"
 import { Apiresponse } from "@/types/apiresponse"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { messagesSchema } from "@/schema/messagesSchema"
-const page = ({params}:any) => {
+
+const Page = ({params}:any) => {
   const username=params.username;
   const [isloading,setisloading]=useState(false);
   const [msg,setMsg]=useState<MessageState>({content:" ",createdAt: new Date()});
@@ -86,4 +87,4 @@ const page = ({params}:any) => {
   )
 }
 
-export default page
+export default Page
