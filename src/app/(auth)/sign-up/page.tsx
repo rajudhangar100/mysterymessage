@@ -41,9 +41,9 @@ const Page = () => {
         setischeckusername(true);
         setusernameMsg("");
         try{
-        const result = await axios.get(`/api/check-unique-username?username=${username}`);
-        console.log(result);
-        setusernameMsg(result.data.message);
+          const result = await axios.get(`/api/check-unique-username?username=${username}`);
+          console.log(result);
+          setusernameMsg(result.data.message);
         }catch(error){
           const axiosError=error as AxiosError<Apiresponse>
           setusernameMsg(axiosError.response?.data.message ?? "Error checking Username");

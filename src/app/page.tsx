@@ -24,11 +24,19 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import axios from "axios";
  
 
 const Home=()=>{
   const [date, setDate] = React.useState<Date>()
   const {data:session}=useSession();
+  const handleclick = async ()=>{
+    try{
+      await axios.get(`/api/checkconnectdb`);
+    }catch(error){
+      console.log(error);
+    }
+  }
   return(<>
    <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-24 py-12 bg-gray-800 text-white">
     <section className="text-center mb-8 md:mb-12">
@@ -92,6 +100,7 @@ const Home=()=>{
     </main>
     <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
         © 2023 True Feedback. All rights reserved.
+        <button onClick={handleclick}>Check</button>
       </footer>
   </>)
 }
