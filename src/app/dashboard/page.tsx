@@ -27,6 +27,7 @@ const Page = () => {
   const [isloading,setisloading]=useState(false);
   const [isswitchloading,setisswitchloading]=useState(false);
   const router = useRouter();
+  const [profileURL,setprofileURL] = useState("");
 
 
   const {toast}=useToast();
@@ -124,8 +125,9 @@ const Page = () => {
   },[session,setValue])
 
   //Do more research
-  const baseURL = `${window.location.protocol}//${window.location.host}`;
-  const profileURL=`${baseURL}/u/${username}`;
+  useEffect(()=>{
+    setprofileURL(`${window.location.protocol}//${window.location.host}/u/${username}`);
+  },[]);
 
   //when button is clicked then this function will be triggered
   const copytoclipboard = () => {
