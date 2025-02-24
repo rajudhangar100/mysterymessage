@@ -52,7 +52,7 @@ export async function GET(req:Request){
         console.error("Error, while verifying username ",error);
         return Response.json({
             success:false,
-            message:"Error checking username"
+            message:error
         })
     }
     
