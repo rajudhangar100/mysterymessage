@@ -32,9 +32,9 @@ const Home=()=>{
   const {data:session}=useSession();
   const handleclick = async ()=>{
     try{
-      await axios.get(`/api/checkconnectdb`);
+      const data = await axios.get(`/api/checkconnectdb`);
     }catch(error){
-      console.log(error);
+      console.log("This is Error: ",error);
     }
   }
   return(<>
@@ -99,8 +99,8 @@ const Home=()=>{
     </section>
     </main>
     <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
-        © 2023 True Feedback. All rights reserved.
-        <button onClick={handleclick}>Check</button>
+        © 2023 True Feedback. All rights reserved.<br></br>
+        <button onClick={handleclick} className="bg-orange-600 px-4 py-2 rounded-md">Check</button>
       </footer>
   </>)
 }

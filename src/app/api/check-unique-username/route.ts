@@ -26,7 +26,7 @@ export async function GET(req:Request){
             username:searchParams.get('username')
         }
         const result=UserQuerySchema.safeParse(queryParams);
-        console.log(result.data?.username.length);
+        console.log("This is username's length: ",result.data?.username.length);
         if(!result.success){
             const FormattedError=result.error.format().username?._errors || [];
             return Response.json({
@@ -42,12 +42,12 @@ export async function GET(req:Request){
             return Response.json({
                 success:false,
                 message:"Username already taken"
-            },{ status:500})
+            },{ status:200})
         }
         return Response.json({
             success:true,
             message:"Username is unique"
-        },{status: 500})
+        },{status: 200})
     } catch (error) {
         console.error("Error, while verifying username ",error);
         return Response.json({

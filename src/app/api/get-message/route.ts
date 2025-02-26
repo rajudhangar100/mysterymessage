@@ -30,7 +30,7 @@ export async function GET(req:Request){
             return Response.json({
                 success:true,
                 message:"User Messages are empty"
-            },{ status:400 })
+            },{ status:200 })
         }
         return Response.json({
             success:true,

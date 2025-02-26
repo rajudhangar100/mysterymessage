@@ -6,7 +6,6 @@ import { Message } from "@/models/User";//it is for type safety
 
 export async function POST(req:Request){
     await connectDb();
-    console.log("Request made by frontend to server: ",req);
     const { username,content }=await req.json();
     console.log(username,content);
     try{

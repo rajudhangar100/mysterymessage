@@ -73,8 +73,6 @@ const Page = () => {
     setisloading(true);
     try{
       const response = await axios.get<Apiresponse>('/api/get-message');
-      console.log("Response for collecting all the messages: ",response);
-      console.log("This is final: ",(response.data.messages));
       setmessages(response.data.messages || [])
       if(refresh){
         toast({

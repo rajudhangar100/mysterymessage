@@ -48,7 +48,7 @@ export async function POST(req:Request) {
         return Response.json({
             success:true,
             message:"User successfully verified"
-        },{ status:201})
+        },{ status:200})
 
     } catch (error) {
         console.error("Error checking code ",error);
